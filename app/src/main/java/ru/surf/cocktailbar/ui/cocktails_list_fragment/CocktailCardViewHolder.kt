@@ -5,6 +5,7 @@ import ru.surf.cocktailbar.databinding.ItemCocktailBinding
 
 class CocktailCardViewHolder(
     private val binding: ItemCocktailBinding,
+    private val viewModel: CocktailsListViewModel
 ) : RecyclerView.ViewHolder(binding.root) {
 
     init {

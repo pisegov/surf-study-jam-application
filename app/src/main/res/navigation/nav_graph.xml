@@ -9,5 +9,12 @@
         android:id="@+id/cocktailsListFragment"
         android:name="ru.surf.cocktailbar.ui.cocktails_list_fragment.CocktailsListFragment"
         android:label="CocktailsListFragment"
-        tools:layout="@layout/fragment_cocktails_list" />
+        tools:layout="@layout/fragment_cocktails_list"
+
+        />
+    <fragment
+        android:id="@+id/editCocktailFragment"
+        android:name="ru.surf.cocktailbar.ui.edit_cocktail_fragment.EditCocktailFragment"
+        android:label="EditCocktailFragment"
+        tools:layout="@layout/fragment_edit_cocktail" />
 </navigation>

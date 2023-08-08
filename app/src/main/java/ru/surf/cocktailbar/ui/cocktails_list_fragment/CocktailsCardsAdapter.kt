@@ -4,9 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import ru.surf.cocktailbar.databinding.ItemCocktailBinding
+import ru.surf.cocktailbar.ui.cocktails_list_fragment.ioc.CocktailsListFragmentScope
+import javax.inject.Inject
 
 
-class CocktailsCardsAdapter() :
+@CocktailsListFragmentScope
+class CocktailsCardsAdapter @Inject constructor(private val viewModel: CocktailsListViewModel) :
     ListAdapter<CocktailCard, CocktailCardViewHolder>(CocktailsDiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CocktailCardViewHolder {
@@ -16,7 +19,7 @@ class CocktailsCardsAdapter() :
             false
         )
 
-        return CocktailCardViewHolder(view)
+        return CocktailCardViewHolder(view, viewModel)
     }
 
     override fun onBindViewHolder(holder: CocktailCardViewHolder, position: Int) {
