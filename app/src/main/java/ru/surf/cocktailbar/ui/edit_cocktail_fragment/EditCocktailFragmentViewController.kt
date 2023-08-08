@@ -38,6 +38,10 @@ class EditCocktailFragmentViewController @Inject constructor(
                 }
 
             }
+            cancelButton.setOnClickListener {
+                Navigation.findNavController(viewBinding.root)
+                    .navigateUp()
+            }
         }
     }
 }
