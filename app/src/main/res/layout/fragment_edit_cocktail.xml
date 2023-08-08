@@ -22,7 +22,7 @@
         </ImageView>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etCocktailName"
+            android:id="@+id/cocktailNameLayout"
             style="@style/InputTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +33,7 @@
             app:layout_constraintTop_toBottomOf="@id/image">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCocktailName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp">
@@ -43,7 +44,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etCocktailDescription"
+            android:id="@+id/cocktailDescriptionLayout"
             style="@style/InputTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,9 +53,10 @@
             app:helperText="Optional field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etCocktailName">
+            app:layout_constraintTop_toBottomOf="@id/cocktailNameLayout">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCocktailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:gravity="start"
@@ -71,7 +73,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etCocktailDescription">
+            app:layout_constraintTop_toBottomOf="@id/cocktailDescriptionLayout">
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -89,7 +91,7 @@
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etCocktailRecipe"
+            android:id="@+id/cocktailRecipeLayout"
             style="@style/InputTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,6 +103,7 @@
             app:layout_constraintTop_toBottomOf="@id/ingredientsList">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCocktailRecipe"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:gravity="start"
@@ -122,7 +125,7 @@
             android:textSize="22sp"
             android:textStyle="normal"
             app:backgroundTint="@color/blue"
-            app:layout_constraintTop_toBottomOf="@id/etCocktailRecipe" />
+            app:layout_constraintTop_toBottomOf="@id/cocktailRecipeLayout" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cancelButton"
