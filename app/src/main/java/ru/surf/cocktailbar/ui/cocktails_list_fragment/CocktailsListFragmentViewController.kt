@@ -4,8 +4,10 @@ import android.app.Activity
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.surf.cocktailbar.R
 import ru.surf.cocktailbar.databinding.FragmentCocktailsListBinding
 import javax.inject.Inject
 
@@ -31,13 +33,17 @@ class CocktailsListFragmentViewController @Inject constructor(
 
             setupRecycler()
             checkListEmptinessAndSetupViews()
+
+            fabAddCocktail.setOnClickListener {
+                findNavController(binding.root)
+                    .navigate(R.id.action_cocktailsListFragment_to_editCocktailFragment)
+            }
         }
     }
 
 
     private fun setupRecycler() {
-        with(binding)
-        {
+        with(binding) {
             cocktailsRecycler.apply {
                 adapter = cardsAdapter
                 layoutManager =
