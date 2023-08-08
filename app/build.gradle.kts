@@ -39,6 +39,7 @@ android {
     }
 }
 
+val roomVersion = "2.5.2"
 dependencies {
 
     implementation("androidx.core:core-ktx:1.10.1")
@@ -54,6 +55,12 @@ dependencies {
 
     implementation("com.google.dagger:dagger:2.47")
     kapt("com.google.dagger:dagger-compiler:2.47")
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$roomVersion")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
